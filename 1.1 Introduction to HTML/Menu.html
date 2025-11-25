@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Traditional and Homestyle recipes</title>
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <style>
+        /* trying out different inline */
+        nav{
+            /* adds texture and interest when the nav bar is different */
+            background-image: linear-gradient(to bottom, rgb(255, 235, 205), rgba(255, 235, 205, 0.277)), url('images/Farm.jpg');
+            background-size: cover; /* Ensures the image covers the container */
+            background-position: center; /* Centers the image */
+            height: auto; /* Example height */
+            width: auto; /* Example width */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Carrot Valley Diner</h1>
+        <nav>  
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="menu.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <Main>
+        <section>
+            <section>
+    <h2>This Weeks Menu</h2>
+    <!-- class will help me modify it the way i need in CSS -->
+    <div class="menu-grid">
+        <div class="menu-item-card">
+            <div class="item-image" style="background-image: url('Images/Pot\ Roast.jpg');"></div>
+            <div class="item-details">
+                <h3 class="item-name">Pot Roast</h3>
+                <p class="item-description">A hearty pot roast with tender meat and vegetables.</p>
+                <span class="item-price">$15.99</span>
+            </div>
+        </div>
+
+        <div class="menu-item-card">
+            <div class="item-image" style="background-image: url('Images/Lasguna.jpg');"></div>
+            <div class="item-details">
+                <h3 class="item-name">Lasguna</h3>
+                <p class="item-description">Classic Lasagna just like Gramma used to make.</p>
+                <span class="item-price">$23.99</span>
+            </div>
+        </div>
+        
+        <div class="menu-item-card">
+            <div class="item-image" style="background-image: url('Images/ChickenNoodle\ Soup.jpg');"></div>
+            <div class="item-details">
+                <h3 class="item-name">Traditional Soup</h3>
+                <p class="item-description">Soup of the week</p>
+                <span class="item-price">$23.99</span>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Use <table>, <thead>, <tbody>, <tr>, <th>, and <td> tags. -->
+        <!-- Include a form that asks for:
+        Name (text input)
+        Email (email input)
+        Message (textarea)
+        A submit button
+        At the bottom of the page, add a <footer> that includes:
+        Copyright information
+        A link to a placeholder restaurant website to your home page -->
+        <section id="contact">
+    <h2>Contact</h2>
+    <form>
+        <label for="name">Name:</label> 
+        <input id="name" type="text" placeholder="enter your name"/>
+    <br>
+        <label for="eml">Email:</label>
+        <input id="eml" type="eml" placeholder="enter your email"/>
+    <br>
+        <textarea name="message" rows="5" cols="40" placeholder="Enter your message here..."></textarea>
+                
+    <br><br>
+        <button id="btn">Submit</button>                
+            </form>
+        </section>    
+    </Main>        
+    
+    <footer>
+        <p>© 2025 Carrot Valley Diner. All rights reserved</p>
+        <p><a href="Home.html">Return to Home Page</a></p>
+    </footer>
+        
+
+</body>
+</html>
+
+<!-- ghoy-yhlk-pcsp-bmks -->

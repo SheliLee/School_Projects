@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ html, body {
+        margin: 0;
+        padding: 0;
+    }
+body{
+    background-color: #ffebcd;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+main{
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 10px;
+    color: #262a35;
+}
+header{
+    text-align: center;
+    background-color: #aa9371;
+    padding-bottom: 10px;
+    background-image: linear-gradient(to bottom, #aa9a71, #ffebcd);
+}
+p {
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 4px;
+    /* margin-top: 4%;
+    margin-left: 7%;
+    margin-right: 7%;
+    border-radius: 7px; */
+}
+nav{
+    position: sticky;
+    top: 0;
+    background-color: #aa93714a;
+    z-index: 1000;
+    margin: 80;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 4px double #262a3567;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav li {
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+nav li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #05524d;
+    font-size: 30px;
+    /* Combined transitions into a single rule */
+    transition: text-shadow 0.3s ease, background-color 0.4s ease-in-out;
+}
+nav li a:hover {
+    text-shadow: 0px 0px 15px rgb(5, 82, 77);
+    color: #aa9371;
+    background-color: #ebddbfbe;
+}
+h1, h2 {
+    font-size: 100px;
+    color: #05524d;
+    text-align: center;
+}
+h1 {
+    padding-top: 22px;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h2 {
+    font-size: 50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    background-color: #ebddbf67;
+    padding: 20px;
+    border: 1px solid #dddddd80;
+    border-radius: 5px;
+    transition: background-color 0.5s ease-in-out;
+}
+form:hover {
+    background-color: #aa93714a;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+/* interaction with the form */
+form input:focus,
+form textarea:focus {
+    /* change the colour so you know when you have clicked on the text areas */
+    border-color: blanchedalmond;
+    box-shadow: 0 0 6px rgba(5, 82, 77, 0.479);
+}
+form button {
+    display: block;
+    margin: auto;
+    background-color: #05524d;
+    color: #ebddbf;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: larger;
+}
+form button:hover {
+    animation-name: gentleScaleAndFade;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #ebddbf;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+}
+footer a {
+    color: #9fe2bf;
+    text-decoration: none;
+
+}
+img {
+    max-width: auto;
+    height: auto;
+}
+/* add simple fade to the nav bar */
+@keyframes gentleScaleAndFade {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* adjust for screen size */
+@media screen and (max-width: 1080px) {
+    nav ul {
+        flex-direction: column;
+    }
+    body {
+        background-image: linear-gradient(to top, #aa9a71, #aa9a71, #ffebcd, #ffebcd);
+    }
+}
+/* adjust for screen size  */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 65px;
+    }
+    h2 {
+        font-size: 45px;
+    }
+    nav li a {
+        font-size: 30px;
+    }
+    p, td, th {
+        font-size: 20px;
+    }
+    main {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    form input,
+    form textarea {
+        width: 100%;
+        padding: 5px;
+    }
+    form button {
+        width: 100%;
+    }
+}
+
+
+
+/* test trying to see if i can get this to work */
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap; /* i figured out what flex wrap means! */
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Individual menu item card */
+.menu-item-card {
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Adjust this width to control how many items fit on one row */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ebddbf;
+    color: #05524d;
+    transition: transform 0.3s ease-in-out;
+}
+/* sutble movement to add interest, something fun */
+.menu-item-card:hover {
+    transform: translateY(-3px);
+}
+
+.item-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    /* needed a trasnparent overlay to blend better*/
+    background-color: rgba(0, 0, 0, 0.164); 
+    background-blend-mode: overlay;
+}
+
+/* id. text */
+.item-details {
+    padding: 15px;
+    text-align: center;
+}
+.item-name {
+    /* make the text different so it stands out */
+    font-family: Georgia, 'Times New Roman', Times, serif, serif;
+    font-size: 2.2rem;
+    margin: 0;
+}
+.item-description {
+    font-size: 0.9rem;
+    color: rgb(34, 137, 139);
+    margin: 5px 0;
+}
+.item-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #05524d;
+    margin-top: 10px;
+}
